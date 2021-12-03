@@ -1,12 +1,3 @@
-# https://www.century21.com/real-estate/07036/LZ07036/
-# 07036 is the zip code that can be changed
-# also need to in the LZ part of the link
-
-# Combine bs4 with selenium
-# https://medium.com/analytics-vidhya/using-python-and-selenium-to-scrape-infinite-scroll-web-pages-825d12c24ec7
-# Selenium scrolling on practice page
-
-
 import selenium
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
@@ -20,7 +11,7 @@ import time
 import sys
 
 
-titles = ["Price", "Beds", "Full Baths", "Half Baths", "Adress", "Link"]
+titles = ["Price", "Beds", "Full Baths", "Half Baths", "Adress", "Site"]
 all_homes = []
 
 
@@ -31,13 +22,15 @@ def scroll_window(zip_code):
     options.add_argument("--headless")
 
     driver = webdriver.Chrome(options=options)
-
+    
+    # Need to click on the gallery view buttons so that all the homes show on the web page.
     driver.get(site)
     time.sleep(2)
     grid_view = driver.find_element(By.ID, "gallery-view-button")
     grid_view.click()
     time.sleep(1)
 
+    # Scroll to the bottom of the page since the page will only load the homes if you scroll down.
     page_height = driver.execute_script("return document.body.scrollHeight")
     element = driver.find_element(By.TAG_NAME, "body")
 
@@ -60,6 +53,7 @@ def house_info(page):
 
     results = soup.find_all("div", {"class":"property-card-primary-info"})
 
+    # Collect each home information and save it as a dictionary.
     for items in results:
         home_info = []
         try:
@@ -91,6 +85,7 @@ def house_info(page):
 
         all_homes.append(dict(zip(titles, home_info)))
 
+    # Save the dictionaries to a csv file.
     df = pandas.DataFrame(all_homes)
     df.to_csv('Output.csv')
 
