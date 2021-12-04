@@ -1,4 +1,4 @@
-# property-scraper
+# Property-Scraper
 Command line tool that scrapes homes in a given zip code.
 
 ## General info
