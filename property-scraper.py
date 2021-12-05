@@ -14,7 +14,7 @@ titles = ["Price", "Beds", "Full Baths", "Half Baths", "Adress", "Site"]
 all_homes = []
 
 
-def scroll_window(zip_code):
+def load_homes(zip_code):
     site = f"https://www.century21.com/real-estate/{zip_code}/LZ{zip_code}/?"
     
     options = Options()  
@@ -98,7 +98,7 @@ def main():
     if len(sys.argv) == 1:
         parser.print_help(sys.stderr)
     else:
-        print(scroll_window(args.zip))
+        print(load_homes(args.zip))
 
 
 if __name__ == "__main__":
