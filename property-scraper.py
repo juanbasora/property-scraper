@@ -91,7 +91,7 @@ def house_info(page):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("zip", help="Zip code of the ")
+    parser.add_argument("zip", help="Zip code of the area you want the homes for sale.")
 
     args = parser.parse_args()
 
