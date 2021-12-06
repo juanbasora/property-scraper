@@ -98,7 +98,7 @@ def main():
     if len(sys.argv) == 1:
         parser.print_help(sys.stderr)
     else:
-        print(load_homes(args.zip))
+        load_homes(args.zip)
 
 
 if __name__ == "__main__":
