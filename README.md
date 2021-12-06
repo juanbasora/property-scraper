@@ -6,5 +6,5 @@ This project is simple web scraper that collects all the homes for sale in a giv
 
 ## Example
 ```
-property_scraper.py 94114
+property-scraper.py 94114
 ```
