@@ -130,6 +130,3 @@ def main():
 if __name__ == "__main__":
     main()
 
-
-# new package
-### webdriver-manager
