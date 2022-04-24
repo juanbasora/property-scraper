@@ -1,3 +1,5 @@
+
+[![GitHub license](https://img.shields.io/github/license/juanbasora/Expense-tracker)](https://github.com/juanbasora/property-scraper)
 # Property-Scraper
 Command line tool that scrapes homes in a given zip code.
 
