@@ -11,3 +11,4 @@ This project is simple web scraper that collects all the homes for sale in a giv
 property-scraper.py 94114
 ```
 
+![simplescreenrecorder](https://user-images.githubusercontent.com/28414217/164991342-96d5b14f-8524-4c82-ba3c-f815ccf07f1c.gif)
