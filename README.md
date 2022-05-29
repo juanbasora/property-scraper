@@ -12,3 +12,14 @@ property-scraper.py 94114
 ```
 
 ![simplescreenrecorder](https://user-images.githubusercontent.com/28414217/164991342-96d5b14f-8524-4c82-ba3c-f815ccf07f1c.gif)
+
+## How to use
+```
+git clone https://github.com/juanbasora/property-scraper
+
+cd property-scraper
+
+pip install -r requirements.txt
+
+python3 property-scraper.py 94114
+```
